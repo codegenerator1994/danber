@@ -27,7 +27,7 @@ const pages = [
 function Navbar() {
   const theme = useTheme();
   const navigate = useNavigate();
-  const isMobile = useMediaQuery("(max-width:430px)");
+  const isMobile = useMediaQuery("(max-width:667px)");
 
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [expandedSubMenu, setExpandedSubMenu] = useState("");

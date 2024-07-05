@@ -12,7 +12,7 @@ import Logo from "../assets/images/footer_logo.png";
 
 const Footer = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery("(max-width:430px)");
+  const isMobile = useMediaQuery("(max-width:667px)");
 
   return (
     <Box

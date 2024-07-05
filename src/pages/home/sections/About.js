@@ -7,7 +7,7 @@ import { StyledTypography, VideoContainer } from "../../../styles";
 import Video from "../../../assets/videos/movie.mp4";
 
 const About = () => {
-  const isMobile = useMediaQuery("(max-width:430px)");
+  const isMobile = useMediaQuery("(max-width:667px)");
 
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);

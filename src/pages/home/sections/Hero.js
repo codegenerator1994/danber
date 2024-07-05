@@ -7,6 +7,7 @@ import HeroImg from "../../../assets/images/hero_img.png";
 
 const Hero = () => {
   const theme = useTheme();
+  const isLandMobile = useMediaQuery("(max-width:667px)");
   const isMobile = useMediaQuery("(max-width:430px)");
   return (
     <Box
@@ -24,7 +25,7 @@ const Hero = () => {
           ...theme.container,
           flexDirection: "column",
           width: "100%",
-          height: "calc(100% - 215px)",
+          height: isLandMobile ? "calc(100% - 94px)" : "calc(100% - 215px)",
         }}
       >
         <Box sx={{ textAlign: "center" }}>
@@ -69,7 +70,7 @@ const Hero = () => {
           bottom: "0",
           width: "100%",
           borderRadius: "80px 80px 0 0",
-          height: isMobile ? 38 : 80,
+          height: isMobile || isLandMobile ? 38 : 80,
           background: "#F6F6F6",
         }}
       />

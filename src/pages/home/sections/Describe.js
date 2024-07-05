@@ -18,8 +18,8 @@ import SSMImg from "../../../assets/images/Akhilesh.png";
 
 const Describe = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery("(max-width:430px)");
-
+  const isMobile = useMediaQuery("(max-width:667px)");
+  const isSmallMobile = useMediaQuery("(max-width:430px)");
   return (
     <Box
       sx={{
@@ -307,7 +307,7 @@ const Describe = () => {
               ...theme.container,
               gap: isMobile ? "20px" : 3,
               width: "100%",
-              flexDirection: isMobile ? "column" : "row",
+              flexDirection: isSmallMobile ? "column" : "row",
             }}
           >
             <TeamCard
@@ -324,8 +324,10 @@ const Describe = () => {
           <Box
             sx={{
               display: "grid",
-              gridTemplateColumns: isMobile
+              gridTemplateColumns: isSmallMobile
                 ? "minmax(0, 1fr)"
+                : isMobile
+                ? "minmax(0, 1fr) minmax(0, 1fr)"
                 : "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)",
               gap: isMobile ? "20px" : 3,
             }}

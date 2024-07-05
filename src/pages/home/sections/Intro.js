@@ -15,7 +15,7 @@ import SubscribeImg from "../../../assets/images/subscribe_img.png";
 
 const Intro = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery("(max-width:430px)");
+  const isMobile = useMediaQuery("(max-width:667px)");
 
   const colors = [
     "rgb(99 102 241)",
@@ -66,7 +66,7 @@ const Intro = () => {
             ...theme.container,
             flexDirection: "column",
             justifyContent: "flex-start",
-            alignItems: "flex-start",
+            alignItems: isMobile ? "center" : "flex-start",
             gap: 2,
           }}
         >
@@ -98,7 +98,13 @@ const Intro = () => {
               Coming soon
             </Button>
           </Box>
-          <Box sx={{ ...theme.container, justifyContent: "flex-start" }}>
+          <Box
+            sx={{
+              ...theme.container,
+              justifyContent: "flex-start",
+              flexWrap: isMobile ? "wrap" : "unset",
+            }}
+          >
             <StyledTypography
               fontSize={"2.25rem"}
               color={"white"}
