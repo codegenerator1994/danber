@@ -62,7 +62,13 @@ const Footer = () => {
             United States
           </StyledTypography>
         </Box>
-        <Box sx={{ flex: 1, width: "100%", textAlign: "center" }}>
+        <Box
+          sx={{
+            flex: 1,
+            width: "100%",
+            textAlign: isMobile ? "center" : "unset",
+          }}
+        >
           <StyledTypography
             fontWeight={600}
             fontSize={"1.5rem"}
