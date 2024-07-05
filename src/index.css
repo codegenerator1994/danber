@@ -1,0 +1,35 @@
+@font-face {
+  font-family: MainFont;
+  src: url("./assets/fonts/main/static/PlusJakartaSans-Regular.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: MainFont, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F6F6F6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.MuiToolbar-root .MuiSvgIcon-root {
+  fill: black !important;
+}
+
+@media only screen and (max-width: 430px) {
+  html {
+    font-size: 11px;
+  }
+}
