@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Box, useTheme, useMediaQuery } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 import { StyledTypography, VideoContainer } from "../../../styles";
